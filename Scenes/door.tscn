@@ -1,0 +1,33 @@
+[gd_scene load_steps=5 format=3 uid="uid://b3x8tswp3jqv7"]
+
+[ext_resource type="Script" uid="uid://bcmyvplvev5e0" path="res://Scripts/door.gd" id="1_p0e35"]
+[ext_resource type="Texture2D" uid="uid://cqbnbtg2ntrpf" path="res://Assets/Doorknob.png" id="1_w6aom"]
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_p0e35"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_fahql"]
+size = Vector2(70, 142)
+
+[node name="Door" type="Area2D"]
+scale = Vector2(2.5, 2.5)
+script = ExtResource("1_p0e35")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+modulate = Color(0.343927, 0.231389, 0.0946176, 1)
+offset_left = -34.0
+offset_top = -77.0
+offset_right = 34.0
+offset_bottom = 65.0
+texture = SubResource("CanvasTexture_p0e35")
+metadata/_edit_use_anchors_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -6)
+shape = SubResource("RectangleShape2D_fahql")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(14, -3)
+scale = Vector2(0.0642398, 0.0642399)
+texture = ExtResource("1_w6aom")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

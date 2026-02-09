@@ -1,0 +1,17 @@
+[gd_scene load_steps=4 format=3 uid="uid://cr2b8eh4ukdhs"]
+
+[ext_resource type="Script" uid="uid://b48s08ghoi4lt" path="res://Scripts/player.gd" id="1_cvnsp"]
+[ext_resource type="Texture2D" uid="uid://de7763r23ndp3" path="res://Assets/Alien Cat.png" id="1_v0iea"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_cvnsp"]
+size = Vector2(196, 160)
+
+[node name="Player" type="CharacterBody2D"]
+script = ExtResource("1_cvnsp")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.169491, 0.169492)
+texture = ExtResource("1_v0iea")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_cvnsp")
