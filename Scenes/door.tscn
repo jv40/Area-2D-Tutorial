@@ -9,7 +9,7 @@
 size = Vector2(70, 142)
 
 [node name="Door" type="Area2D"]
-scale = Vector2(2.5, 2.5)
+scale = Vector2(2, 2)
 script = ExtResource("1_p0e35")
 
 [node name="TextureRect" type="TextureRect" parent="."]
