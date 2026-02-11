@@ -32,4 +32,4 @@ script = ExtResource("3_jjvhh")
 position = Vector2(939, 517)
 
 [node name="Door2" parent="Door Controller" instance=ExtResource("3_8gbba")]
-position = Vector2(194, 169)
+position = Vector2(194, 168)
